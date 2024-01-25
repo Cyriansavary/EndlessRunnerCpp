@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\dev\\EndlessRunnerCpp\\EndlessRunneCpp\\Source\\EndlessRunneCpp\\EndlessRunneCpp.Build.cs",
+		"C:\\dev\\EndlessRunnerCpp\\EndlessRunneCpp\\Source\\EndlessRunneCpp.Target.cs",
+		"C:\\dev\\EndlessRunnerCpp\\EndlessRunneCpp\\Source\\EndlessRunneCppEditor.Target.cs"
+	],
+	"EngineVersion": "5.3.2"
+}

@@ -1,0 +1,19 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/dev/EndlessRunnerCpp/EndlessRunneCpp/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset",
+				"C:/dev/EndlessRunnerCpp/EndlessRunneCpp/Content/Blueprint/BP_GameModeRunner.uasset",
+				"C:/dev/EndlessRunnerCpp/EndlessRunneCpp/Content/Map/MainLevel.umap",
+				"C:/dev/EndlessRunnerCpp/EndlessRunneCpp/Content/Animation/BS_Quinn.uasset",
+				"C:/dev/EndlessRunnerCpp/EndlessRunneCpp/Content/Animation/ABP_RunnerQuin.uasset",
+				"C:/dev/EndlessRunnerCpp/EndlessRunneCpp/Content/Blueprint/BP_RunnerCharacter.uasset",
+				"C:/dev/EndlessRunnerCpp/EndlessRunneCpp/Content/Blueprint/BP_RunnerGameMode.uasset",
+				"C:/dev/EndlessRunnerCpp/EndlessRunneCpp/Content/Animation/ABP_RunnerAnim.uasset"
+			]
+		}
+	]
+}

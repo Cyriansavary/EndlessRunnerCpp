@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "EndlessRunneCpp",
+			"Path": "..\\Source\\EndlessRunneCpp.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "EndlessRunneCppEditor",
+			"Path": "..\\Source\\EndlessRunneCppEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
