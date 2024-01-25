@@ -1,0 +1,29 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\dev\\endlessrunnercpp\\endlessrunnecpp\\intermediate\\build\\win64\\unrealeditor\\inc\\endlessrunnecpp\\uht\\gamemoderunner.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\dev\\endlessrunnercpp\\endlessrunnecpp\\intermediate\\build\\win64\\x64\\endlessrunnecppeditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\dev\\endlessrunnercpp\\endlessrunnecpp\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\endlessrunnecpp\\definitions.endlessrunnecpp.h",
+            "c:\\dev\\endlessrunnercpp\\endlessrunnecpp\\source\\endlessrunnecpp\\gamemoderunner.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "c:\\dev\\endlessrunnercpp\\endlessrunnecpp\\source\\endlessrunnecpp\\floortile.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\components\\boxcomponent.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\components\\shapecomponent.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\shapecomponent.generated.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\boxcomponent.generated.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\components\\arrowcomponent.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\arrowcomponent.generated.h",
+            "c:\\dev\\endlessrunnercpp\\endlessrunnecpp\\source\\endlessrunnecpp\\obstacle.h",
+            "c:\\dev\\endlessrunnercpp\\endlessrunnecpp\\intermediate\\build\\win64\\unrealeditor\\inc\\endlessrunnecpp\\uht\\obstacle.generated.h",
+            "c:\\dev\\endlessrunnercpp\\endlessrunnecpp\\intermediate\\build\\win64\\unrealeditor\\inc\\endlessrunnecpp\\uht\\floortile.generated.h",
+            "c:\\dev\\endlessrunnercpp\\endlessrunnecpp\\intermediate\\build\\win64\\unrealeditor\\inc\\endlessrunnecpp\\uht\\gamemoderunner.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

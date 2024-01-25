@@ -54,10 +54,22 @@
     <ClInclude Include="..\..\Source\EndlessRunneCpp\EndlessRunneCppGameMode.h">
       <Filter>Source\EndlessRunneCpp</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\EndlessRunneCpp\FloorTile.cpp">
+      <Filter>Source\EndlessRunneCpp</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\EndlessRunneCpp\FloorTile.h">
+      <Filter>Source\EndlessRunneCpp</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\EndlessRunneCpp\GameModeRunner.cpp">
       <Filter>Source\EndlessRunneCpp</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\EndlessRunneCpp\GameModeRunner.h">
+      <Filter>Source\EndlessRunneCpp</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\EndlessRunneCpp\Obstacle.cpp">
+      <Filter>Source\EndlessRunneCpp</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\EndlessRunneCpp\Obstacle.h">
       <Filter>Source\EndlessRunneCpp</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\EndlessRunneCpp\RunnerAnimInstance.cpp">

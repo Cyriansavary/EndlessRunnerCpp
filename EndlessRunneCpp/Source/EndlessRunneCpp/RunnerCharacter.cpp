@@ -4,12 +4,22 @@
 #include "RunnerCharacter.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "GameFramework/FloatingPawnMovement.h"
+#include "Kismet/GameplayStatics.h"
+
+
 
 // Sets default values
 ARunnerCharacter::ARunnerCharacter()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+
+	bUseControllerRotationPitch = false;
+	bUseControllerRotationYaw = false;
+
+
+	PawnMovement = CreateDefaultSubobject<UFloatingPawnMovement>(TEXT("PawnMovement"));
 
 	CameraArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraArm"));
 	CameraArm->TargetArmLength = 350.f;
@@ -35,6 +45,12 @@ void ARunnerCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	FRotator ControlRotation = GetControlRotation();
+	ControlRotation.Pitch = 0.f;
+	ControlRotation.Roll = 0.f;
+
+	AddMovementInput(ControlRotation.Vector());
+
 }
 
 // Called to bind functionality to input
@@ -45,24 +61,62 @@ void ARunnerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	PlayerInputComponent->BindAction(TEXT("Jump"), IE_Pressed, this, &ARunnerCharacter::Jump);
 	PlayerInputComponent->BindAction(TEXT("Jump"), IE_Released, this, &ARunnerCharacter::StopJumping);
 
-	PlayerInputComponent->BindAction(TEXT("MoveLeft"), IE_Pressed, this, &ARunnerCharacter::MoveLeft);
-	PlayerInputComponent->BindAction(TEXT("MoveRight"), IE_Pressed, this, &ARunnerCharacter::MoveRight);
+	PlayerInputComponent->BindAxis(TEXT("MoveRight"), this, &ARunnerCharacter::MoveRight);
 	PlayerInputComponent->BindAction(TEXT("MoveDown"), IE_Pressed, this, &ARunnerCharacter::MoveDown);
 
 }
 
 void ARunnerCharacter::MoveLeft()
 {
+	
 }
 
-void ARunnerCharacter::MoveRight()
+void ARunnerCharacter::MoveRight(float Value)
 {
+	PawnMovement->AddInputVector(GetActorRightVector() * Value);
 }
 
 void ARunnerCharacter::MoveDown()
 {
 }
 
+void ARunnerCharacter::OnDeath()
+{
+	bIsDead = false;
+	if (RestartTimerHandle.IsValid())
+	{
+		GetWorldTimerManager().ClearTimer(RestartTimerHandle);
+	}
+	UKismetSystemLibrary::ExecuteConsoleCommand(GetWorld(), TEXT("RestartLevel"));
+}
+void ARunnerCharacter::Death()
+{
+	if (!bIsDead)
+	{
+		const FVector PawnLocation = GetActorLocation();
+
+		UWorld* World = GetWorld();
+
+		if(World)
+		{
+			bIsDead = true;
+			DisableInput(nullptr);
+
+			if (DeathParticle)
+			{
+				UGameplayStatics::SpawnEmitterAtLocation(World, DeathParticle, PawnLocation);
+			}
+			if (DeathSound)
+			{
+				UGameplayStatics::PlaySoundAtLocation(World, DeathSound, PawnLocation);
+			}
+
+			GetMesh()->SetVisibility(false);
+
+			World->GetTimerManager().SetTimer(RestartTimerHandle, this, &ARunnerCharacter::OnDeath, 1.f);
+		}
+	}
+}
 
 
 

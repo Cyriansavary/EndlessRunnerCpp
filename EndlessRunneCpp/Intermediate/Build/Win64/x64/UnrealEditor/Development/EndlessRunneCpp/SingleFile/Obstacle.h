@@ -1,0 +1,1 @@
+#include "C:/dev/EndlessRunnerCpp/EndlessRunneCpp/Source/EndlessRunneCpp/Obstacle.h"

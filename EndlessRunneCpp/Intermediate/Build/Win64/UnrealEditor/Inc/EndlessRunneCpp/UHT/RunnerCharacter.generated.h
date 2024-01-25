@@ -21,7 +21,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
  \
 	DECLARE_FUNCTION(execMoveDown); \
 	DECLARE_FUNCTION(execMoveRight); \
-	DECLARE_FUNCTION(execMoveLeft);
+	DECLARE_FUNCTION(execMoveLeft); \
+	DECLARE_FUNCTION(execOnDeath); \
+	DECLARE_FUNCTION(execDeath);
 
 
 #define FID_dev_EndlessRunnerCpp_EndlessRunneCpp_Source_EndlessRunneCpp_RunnerCharacter_h_12_ACCESSORS

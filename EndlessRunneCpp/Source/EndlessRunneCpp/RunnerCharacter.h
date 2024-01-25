@@ -17,9 +17,21 @@ private:
 
 	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	class UCameraComponent* Camera;
+
+	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	class UFloatingPawnMovement* PawnMovement;
 	
 
 public:
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Assets")
+	class UParticleSystem* DeathParticle;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Assets")
+	class USoundBase* DeathSound;
+
+	UFUNCTION(BlueprintCallable)
+	void Death();
 	// Sets default values for this character's properties
 	ARunnerCharacter();
 
@@ -28,13 +40,22 @@ protected:
 	virtual void BeginPlay() override;
 
 	UFUNCTION()
+	void OnDeath();
+
+	UFUNCTION()
 	void MoveLeft();
 
 	UFUNCTION()
-	void MoveRight();
+	void MoveRight(float Value);
 
 	UFUNCTION()
 	void MoveDown();
+
+	UPROPERTY()
+	FTimerHandle RestartTimerHandle;
+
+	UPROPERTY()
+	bool bIsDead;
 
 
 

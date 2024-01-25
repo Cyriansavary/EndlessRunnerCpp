@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EndlessRunneCppModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74aad5bd1b4edc17fa8449ad9b99fcd4a3d19fc8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5fd6333498ae69d071f82e92c38b341beaa92f6")]
 [assembly: System.Reflection.AssemblyProductAttribute("EndlessRunneCppModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EndlessRunneCppModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
