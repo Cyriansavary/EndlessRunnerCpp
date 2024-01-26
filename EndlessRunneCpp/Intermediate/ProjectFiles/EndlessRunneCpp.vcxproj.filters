@@ -33,6 +33,12 @@
     <Filter Include="Source\EndlessRunneCpp">
       <UniqueIdentifier>{4655D763-DFB1-3EAD-B5C7-BC1E0D6EF575}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\EndlessRunneCpp\CoinItem.cpp">
+      <Filter>Source\EndlessRunneCpp</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\EndlessRunneCpp\CoinItem.h">
+      <Filter>Source\EndlessRunneCpp</Filter>
+    </ClInclude>
     <None Include="..\..\Source\EndlessRunneCpp\EndlessRunneCpp.Build.cs">
       <Filter>Source\EndlessRunneCpp</Filter>
     </None>

@@ -19,9 +19,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define FID_dev_EndlessRunnerCpp_EndlessRunneCpp_Source_EndlessRunneCpp_RunnerCharacter_h_12_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_dev_EndlessRunnerCpp_EndlessRunneCpp_Source_EndlessRunneCpp_RunnerCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execAddCoin); \
 	DECLARE_FUNCTION(execMoveDown); \
 	DECLARE_FUNCTION(execMoveRight); \
-	DECLARE_FUNCTION(execMoveLeft); \
 	DECLARE_FUNCTION(execOnDeath); \
 	DECLARE_FUNCTION(execDeath);
 

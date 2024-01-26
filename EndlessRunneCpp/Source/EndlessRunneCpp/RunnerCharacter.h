@@ -43,9 +43,6 @@ protected:
 	void OnDeath();
 
 	UFUNCTION()
-	void MoveLeft();
-
-	UFUNCTION()
 	void MoveRight(float Value);
 
 	UFUNCTION()
@@ -60,6 +57,9 @@ protected:
 
 
 public:	
+
+	UFUNCTION()
+	void AddCoin();
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 

@@ -21,6 +21,13 @@ void EmptyLinkFunctionForGeneratedCodeRunnerCharacter() {}
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTimerHandle();
 	UPackage* Z_Construct_UPackage__Script_EndlessRunneCpp();
 // End Cross Module References
+	DEFINE_FUNCTION(ARunnerCharacter::execAddCoin)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->AddCoin();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ARunnerCharacter::execMoveDown)
 	{
 		P_FINISH;
@@ -34,13 +41,6 @@ void EmptyLinkFunctionForGeneratedCodeRunnerCharacter() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		P_THIS->MoveRight(Z_Param_Value);
-		P_NATIVE_END;
-	}
-	DEFINE_FUNCTION(ARunnerCharacter::execMoveLeft)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->MoveLeft();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ARunnerCharacter::execOnDeath)
@@ -61,13 +61,35 @@ void EmptyLinkFunctionForGeneratedCodeRunnerCharacter() {}
 	{
 		UClass* Class = ARunnerCharacter::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "AddCoin", &ARunnerCharacter::execAddCoin },
 			{ "Death", &ARunnerCharacter::execDeath },
 			{ "MoveDown", &ARunnerCharacter::execMoveDown },
-			{ "MoveLeft", &ARunnerCharacter::execMoveLeft },
 			{ "MoveRight", &ARunnerCharacter::execMoveRight },
 			{ "OnDeath", &ARunnerCharacter::execOnDeath },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_ARunnerCharacter_AddCoin_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ARunnerCharacter_AddCoin_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "RunnerCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARunnerCharacter_AddCoin_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARunnerCharacter, nullptr, "AddCoin", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARunnerCharacter_AddCoin_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARunnerCharacter_AddCoin_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_ARunnerCharacter_AddCoin()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ARunnerCharacter_AddCoin_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_ARunnerCharacter_Death_Statics
 	{
@@ -110,28 +132,6 @@ void EmptyLinkFunctionForGeneratedCodeRunnerCharacter() {}
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ARunnerCharacter_MoveDown_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_ARunnerCharacter_MoveLeft_Statics
-	{
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ARunnerCharacter_MoveLeft_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "RunnerCharacter.h" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARunnerCharacter_MoveLeft_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARunnerCharacter, nullptr, "MoveLeft", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARunnerCharacter_MoveLeft_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARunnerCharacter_MoveLeft_Statics::Function_MetaDataParams) };
-	UFunction* Z_Construct_UFunction_ARunnerCharacter_MoveLeft()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ARunnerCharacter_MoveLeft_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -242,9 +242,9 @@ void EmptyLinkFunctionForGeneratedCodeRunnerCharacter() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ARunnerCharacter_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_ARunnerCharacter_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_ARunnerCharacter_AddCoin, "AddCoin" }, // 3283113955
 		{ &Z_Construct_UFunction_ARunnerCharacter_Death, "Death" }, // 1710052501
 		{ &Z_Construct_UFunction_ARunnerCharacter_MoveDown, "MoveDown" }, // 1579443865
-		{ &Z_Construct_UFunction_ARunnerCharacter_MoveLeft, "MoveLeft" }, // 2035306446
 		{ &Z_Construct_UFunction_ARunnerCharacter_MoveRight, "MoveRight" }, // 1390460482
 		{ &Z_Construct_UFunction_ARunnerCharacter_OnDeath, "OnDeath" }, // 2953674913
 	};
@@ -360,9 +360,9 @@ void EmptyLinkFunctionForGeneratedCodeRunnerCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_dev_EndlessRunnerCpp_EndlessRunneCpp_Source_EndlessRunneCpp_RunnerCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ARunnerCharacter, ARunnerCharacter::StaticClass, TEXT("ARunnerCharacter"), &Z_Registration_Info_UClass_ARunnerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARunnerCharacter), 3226480848U) },
+		{ Z_Construct_UClass_ARunnerCharacter, ARunnerCharacter::StaticClass, TEXT("ARunnerCharacter"), &Z_Registration_Info_UClass_ARunnerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARunnerCharacter), 1142889745U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_dev_EndlessRunnerCpp_EndlessRunneCpp_Source_EndlessRunneCpp_RunnerCharacter_h_1619520225(TEXT("/Script/EndlessRunneCpp"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_dev_EndlessRunnerCpp_EndlessRunneCpp_Source_EndlessRunneCpp_RunnerCharacter_h_3785479897(TEXT("/Script/EndlessRunneCpp"),
 		Z_CompiledInDeferFile_FID_dev_EndlessRunnerCpp_EndlessRunneCpp_Source_EndlessRunneCpp_RunnerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_dev_EndlessRunnerCpp_EndlessRunneCpp_Source_EndlessRunneCpp_RunnerCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

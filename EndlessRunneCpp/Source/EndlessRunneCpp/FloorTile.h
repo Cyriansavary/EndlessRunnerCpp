@@ -9,6 +9,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "Components/SceneComponent.h"
 #include "Obstacle.h"
+#include "CoinItem.h"
 #include "FloorTile.generated.h"
 
 
@@ -24,6 +25,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Config")
 	class TSubclassOf<AObstacle> BigObstacleClass;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Config")
+	class TSubclassOf<ACoinItem> CoinClass;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Component")
 	class USceneComponent* SceneComponent;
@@ -45,6 +49,15 @@ public:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Component")
 	class UBoxComponent* FloorTriggerBox;
+
+	UPROPERTY(EditAnyWhere, BlueprintReadOnly, Category = "Config")
+	float SpawnPercent1 = 0.1f;
+
+	UPROPERTY(EditAnyWhere, BlueprintReadOnly, Category = "Config")
+	float SpawnPercent2 = 0.3f;
+
+	UPROPERTY(EditAnyWhere, BlueprintReadOnly, Category = "Config")
+	float SpawnPercent3 = 0.5f;
 
 	UFUNCTION()
 	void SpawnItems();

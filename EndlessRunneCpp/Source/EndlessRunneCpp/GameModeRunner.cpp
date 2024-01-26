@@ -34,7 +34,13 @@ AFloorTile* AGameModeRunner::AddFloorTile(const bool bSpawnItems)
 	return nullptr;
 }
 
+
 void AGameModeRunner::BeginPlay()
 {
 	CreateInitialFloorTiles();
+}
+
+void AGameModeRunner::AddCoins()
+{
+	TotalCoin++;
 }

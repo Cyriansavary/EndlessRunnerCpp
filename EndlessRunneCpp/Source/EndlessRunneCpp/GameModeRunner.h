@@ -17,6 +17,9 @@ class ENDLESSRUNNECPP_API AGameModeRunner : public AGameModeBase
 
 public:
 
+	UPROPERTY(VisibleAnyWhere)
+	int32 TotalCoin = 0;
+
 	UPROPERTY(EditAnyWhere, Category = "Config")
 	TSubclassOf<AFloorTile> FloorTileClass;
 
@@ -31,6 +34,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	AFloorTile* AddFloorTile(const bool bSpawnItems);
+
+	UFUNCTION()
+	void AddCoins();
 
 	protected:
 		virtual void BeginPlay() override;

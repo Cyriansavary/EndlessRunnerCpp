@@ -12,6 +12,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeFloorTile() {}
 // Cross Module References
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	ENDLESSRUNNECPP_API UClass* Z_Construct_UClass_ACoinItem_NoRegister();
 	ENDLESSRUNNECPP_API UClass* Z_Construct_UClass_AFloorTile();
 	ENDLESSRUNNECPP_API UClass* Z_Construct_UClass_AFloorTile_NoRegister();
 	ENDLESSRUNNECPP_API UClass* Z_Construct_UClass_AGameModeRunner_NoRegister();
@@ -263,6 +264,10 @@ void EmptyLinkFunctionForGeneratedCodeFloorTile() {}
 #endif
 		static const UECodeGen_Private::FClassPropertyParams NewProp_BigObstacleClass;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_CoinClass_MetaData[];
+#endif
+		static const UECodeGen_Private::FClassPropertyParams NewProp_CoinClass;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_SceneComponent_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_SceneComponent;
@@ -290,6 +295,18 @@ void EmptyLinkFunctionForGeneratedCodeFloorTile() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_FloorTriggerBox_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_FloorTriggerBox;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_SpawnPercent1_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_SpawnPercent1;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_SpawnPercent2_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_SpawnPercent2;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_SpawnPercent3_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_SpawnPercent3;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_RunGameMode_MetaData[];
 #endif
@@ -334,6 +351,13 @@ void EmptyLinkFunctionForGeneratedCodeFloorTile() {}
 	};
 #endif
 	const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_AFloorTile_Statics::NewProp_BigObstacleClass = { "BigObstacleClass", nullptr, (EPropertyFlags)0x0014000000000015, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AFloorTile, BigObstacleClass), Z_Construct_UClass_UClass, Z_Construct_UClass_AObstacle_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AFloorTile_Statics::NewProp_BigObstacleClass_MetaData), Z_Construct_UClass_AFloorTile_Statics::NewProp_BigObstacleClass_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFloorTile_Statics::NewProp_CoinClass_MetaData[] = {
+		{ "Category", "Config" },
+		{ "ModuleRelativePath", "FloorTile.h" },
+	};
+#endif
+	const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_AFloorTile_Statics::NewProp_CoinClass = { "CoinClass", nullptr, (EPropertyFlags)0x0014000000000015, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AFloorTile, CoinClass), Z_Construct_UClass_UClass, Z_Construct_UClass_ACoinItem_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AFloorTile_Statics::NewProp_CoinClass_MetaData), Z_Construct_UClass_AFloorTile_Statics::NewProp_CoinClass_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFloorTile_Statics::NewProp_SceneComponent_MetaData[] = {
 		{ "Category", "Component" },
@@ -391,6 +415,27 @@ void EmptyLinkFunctionForGeneratedCodeFloorTile() {}
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFloorTile_Statics::NewProp_FloorTriggerBox = { "FloorTriggerBox", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AFloorTile, FloorTriggerBox), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AFloorTile_Statics::NewProp_FloorTriggerBox_MetaData), Z_Construct_UClass_AFloorTile_Statics::NewProp_FloorTriggerBox_MetaData) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFloorTile_Statics::NewProp_SpawnPercent1_MetaData[] = {
+		{ "Category", "Config" },
+		{ "ModuleRelativePath", "FloorTile.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AFloorTile_Statics::NewProp_SpawnPercent1 = { "SpawnPercent1", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AFloorTile, SpawnPercent1), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AFloorTile_Statics::NewProp_SpawnPercent1_MetaData), Z_Construct_UClass_AFloorTile_Statics::NewProp_SpawnPercent1_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFloorTile_Statics::NewProp_SpawnPercent2_MetaData[] = {
+		{ "Category", "Config" },
+		{ "ModuleRelativePath", "FloorTile.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AFloorTile_Statics::NewProp_SpawnPercent2 = { "SpawnPercent2", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AFloorTile, SpawnPercent2), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AFloorTile_Statics::NewProp_SpawnPercent2_MetaData), Z_Construct_UClass_AFloorTile_Statics::NewProp_SpawnPercent2_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFloorTile_Statics::NewProp_SpawnPercent3_MetaData[] = {
+		{ "Category", "Config" },
+		{ "ModuleRelativePath", "FloorTile.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AFloorTile_Statics::NewProp_SpawnPercent3 = { "SpawnPercent3", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AFloorTile, SpawnPercent3), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AFloorTile_Statics::NewProp_SpawnPercent3_MetaData), Z_Construct_UClass_AFloorTile_Statics::NewProp_SpawnPercent3_MetaData) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFloorTile_Statics::NewProp_RunGameMode_MetaData[] = {
 		{ "Category", "FloorTile" },
 		{ "ModuleRelativePath", "FloorTile.h" },
@@ -406,6 +451,7 @@ void EmptyLinkFunctionForGeneratedCodeFloorTile() {}
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AFloorTile_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorTile_Statics::NewProp_SmallObstacleClass,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorTile_Statics::NewProp_BigObstacleClass,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorTile_Statics::NewProp_CoinClass,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorTile_Statics::NewProp_SceneComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorTile_Statics::NewProp_FloorMesh,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorTile_Statics::NewProp_Attachpoint,
@@ -413,6 +459,9 @@ void EmptyLinkFunctionForGeneratedCodeFloorTile() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorTile_Statics::NewProp_LeftPoint,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorTile_Statics::NewProp_RightPoint,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorTile_Statics::NewProp_FloorTriggerBox,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorTile_Statics::NewProp_SpawnPercent1,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorTile_Statics::NewProp_SpawnPercent2,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorTile_Statics::NewProp_SpawnPercent3,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorTile_Statics::NewProp_RunGameMode,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorTile_Statics::NewProp_DestroyTimerHandle,
 	};
@@ -454,9 +503,9 @@ void EmptyLinkFunctionForGeneratedCodeFloorTile() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_dev_EndlessRunnerCpp_EndlessRunneCpp_Source_EndlessRunneCpp_FloorTile_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AFloorTile, AFloorTile::StaticClass, TEXT("AFloorTile"), &Z_Registration_Info_UClass_AFloorTile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AFloorTile), 1359869500U) },
+		{ Z_Construct_UClass_AFloorTile, AFloorTile::StaticClass, TEXT("AFloorTile"), &Z_Registration_Info_UClass_AFloorTile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AFloorTile), 1750863085U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_dev_EndlessRunnerCpp_EndlessRunneCpp_Source_EndlessRunneCpp_FloorTile_h_2664043771(TEXT("/Script/EndlessRunneCpp"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_dev_EndlessRunnerCpp_EndlessRunneCpp_Source_EndlessRunneCpp_FloorTile_h_2075729663(TEXT("/Script/EndlessRunneCpp"),
 		Z_CompiledInDeferFile_FID_dev_EndlessRunnerCpp_EndlessRunneCpp_Source_EndlessRunneCpp_FloorTile_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_dev_EndlessRunnerCpp_EndlessRunneCpp_Source_EndlessRunneCpp_FloorTile_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

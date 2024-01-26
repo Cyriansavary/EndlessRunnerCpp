@@ -77,20 +77,23 @@ void AFloorTile::SpawnItems()
 
 void AFloorTile::SpawnLaneItem(UArrowComponent* lane)
 {
-	const float RandomNumber = FMath::FRandRange(0.f, 1.5f);
+	const float RandomNumber = FMath::FRandRange(0.f, 1.f);
 	FActorSpawnParameters SpawnParameters;
 	SpawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 
 	const FTransform SpawnTransform = lane->GetComponentTransform();
 
-	if (UKismetMathLibrary::InRange_FloatFloat(RandomNumber, 0.5f, 0.75f,true, true))
+	if (UKismetMathLibrary::InRange_FloatFloat(RandomNumber, SpawnPercent1, SpawnPercent2,true, true))
 	{
 		AObstacle* Obstacle = GetWorld()->SpawnActor<AObstacle>(SmallObstacleClass, SpawnTransform, SpawnParameters);
 	}
-	else if (UKismetMathLibrary::InRange_FloatFloat(RandomNumber, 0.75f, 1.f, true, true))
+	else if (UKismetMathLibrary::InRange_FloatFloat(RandomNumber, SpawnPercent2, SpawnPercent3, true, true))
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Spawn Big Obstacle"));
 		AObstacle* Obstacle = GetWorld()->SpawnActor<AObstacle>(BigObstacleClass, SpawnTransform, SpawnParameters);
+	}
+	else if (UKismetMathLibrary::InRange_FloatFloat(RandomNumber, SpawnPercent3, 1.f, true, true))
+	{
+		ACoinItem* Coin = GetWorld()->SpawnActor<ACoinItem>(CoinClass, SpawnTransform, SpawnParameters);
 	}
 
 

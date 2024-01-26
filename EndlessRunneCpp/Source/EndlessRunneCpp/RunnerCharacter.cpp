@@ -2,12 +2,11 @@
 
 
 #include "RunnerCharacter.h"
+#include "GameModeRunner.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/FloatingPawnMovement.h"
 #include "Kismet/GameplayStatics.h"
-
-
 
 // Sets default values
 ARunnerCharacter::ARunnerCharacter()
@@ -36,11 +35,11 @@ ARunnerCharacter::ARunnerCharacter()
 void ARunnerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+	AGameModeRunner* GameMode = Cast<AGameModeRunner>(UGameplayStatics::GetGameMode(GetWorld()));
+
 	
 }
 
-
-// Called every frame
 void ARunnerCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
@@ -64,11 +63,6 @@ void ARunnerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	PlayerInputComponent->BindAxis(TEXT("MoveRight"), this, &ARunnerCharacter::MoveRight);
 	PlayerInputComponent->BindAction(TEXT("MoveDown"), IE_Pressed, this, &ARunnerCharacter::MoveDown);
 
-}
-
-void ARunnerCharacter::MoveLeft()
-{
-	
 }
 
 void ARunnerCharacter::MoveRight(float Value)
@@ -118,5 +112,12 @@ void ARunnerCharacter::Death()
 	}
 }
 
-
+void ARunnerCharacter::AddCoin()
+{
+	AGameModeRunner* GameMode = Cast<AGameModeRunner>(UGameplayStatics::GetGameMode(GetWorld()));
+	if (GameMode)
+	{
+		GameMode->AddCoins();
+	}
+}
 

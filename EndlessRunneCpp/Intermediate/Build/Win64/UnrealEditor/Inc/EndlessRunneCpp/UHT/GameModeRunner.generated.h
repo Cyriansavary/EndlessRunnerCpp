@@ -20,6 +20,7 @@ class AFloorTile;
 #define FID_dev_EndlessRunnerCpp_EndlessRunneCpp_Source_EndlessRunneCpp_GameModeRunner_h_16_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_dev_EndlessRunnerCpp_EndlessRunneCpp_Source_EndlessRunneCpp_GameModeRunner_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execAddCoins); \
 	DECLARE_FUNCTION(execAddFloorTile); \
 	DECLARE_FUNCTION(execCreateInitialFloorTiles);
 
